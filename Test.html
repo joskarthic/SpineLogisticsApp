@@ -1,0 +1,416 @@
+<script type="text/javascript">
+var linecount = 3;
+alert(linecount);
+</script>
+<div class="carousel slide" id="myCarousel" data-ride="carousel">
+	<div class="form-group">
+	    <a class="col-md-2 btn btn-primary" href="#myCarousel" aria-hidden="true" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i>prev</a>
+	    <div class="col-md-8">
+		<center>
+		    <a class="btn btn-inverse" href="#">
+			<span id='currentLine' class="content">
+			    1 /<span class="value"></span>
+			    <script type="text/javascript">document.querySelector('.content .value').innerHTML = linecount; </script>
+			</span>
+		    </a>
+		</center>
+	    </div>
+	    <a class="col-md-2 btn btn-primary pull-right" href="#myCarousel" data-slide="next" aria-hidden="true" >next <i class="glyphicon glyphicon-chevron-right"></i></a>
+	</div>
+	<span class="sr-only">next</span>
+	<div class="carousel-inner col-xs-12 col-md-12" role="listbox">
+	    <div class="item slidercount active" id="myLineCount">
+		<div class="row" id="form_validation">
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Building Type</label>
+			    <select class="form-control selectpicker  btn-sm" name="ML_BULD_TYPE_NEW" id="ML_BULD_TYPE_NEW" data-live-search="true" data-style="btn-white btn-sm" >
+				<option value="">Select</option>
+				    <option value="VSL_CODE" >VSL_DESC</option>
+			    </select>
+			</div>
+		    </div>
+		    <div id="buildingDetails1">
+			<div class="col-md-3">
+			    <div class="col-md-12 form-group">
+				<label class="control-label">Building Name</label>
+				<input type="text" class="form-control ML_FLOOR_CLASS input-sm" name="ML_BUILD_NEW" id="ML_BUILD_NEW" value="ML_BUILD" readonly>
+			    </div>
+			</div>
+			<div class="col-md-3">
+			    <div class="col-md-12 form-group">
+				<label class="control-label">Floor Number</label>
+				<input type="text" class="form-control ML_FLOOR_CLASS input-sm" name="ML_FLOOR_NEW" id="ML_FLOOR_NEW" value="ML_FLOOR" readonly>
+			    </div>
+			</div>
+			<div class="col-md-3" id="flat">
+			    <div class="col-md-12 form-group">
+				<label class="control-label">Appartment Number</label>
+				<input type="text" class="form-control ML_FLAT_CLASS input-sm" name="ML_FLAT_NEW" id="ML_FLAT_NEW" value="ML_FLAT" readonly>
+			    </div>
+			</div>
+	    	    </div>
+		</div>
+		<div class="row">
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Room Type</label>
+			    <select class="form-control selectpicker ML_UNIT_CLASS btn-sm" name="ML_UNIT_NEW" id="ML_UNIT_NEW" data-live-search="true" data-style="btn-white" >
+					<option  value="VSL_CODE">VSL_DESC</option>
+				</select>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Room Number</label>
+			    <input type="text" class="form-control input-sm" name="ML_ROOM_NO" id="ML_ROOM_NO" placeholder="Room Number" value="ML_ROOM_NO" readonly>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Window Number</label>
+			    <input type="text" class="form-control input-sm" name="ML_WINDOW_NO" id="ML_WINDOW_NO" placeholder="Window Number" value="ML_WINDOW_NO" readonly>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Product</label>
+			    <select class="form-control selectpicker ML_PRODUCT_CODE_CLASS btn-sm" data-live-search="true" data-style="btn-white" id="" name="ML_PRODUCT_CODE_NEW" >
+				    <option  value="PR_CODE">PR_DESC</option>
+			    </select>
+			</div>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Color Code</label>
+			    <select class="form-control selectpicker ML_COLOR_CODE_CLASS btn-sm" name="ML_COLOR_CODE_NEW" id="" data-live-search="true" data-style="btn-white" >
+					<option  value="IC_CODE">IC_DESC</option>
+				</select>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Mount Type</label>
+			    <select class="form-control selectpicker ML_MOUNT_TYPE_CLASS btn-sm" name="ML_MOUNT_TYPE_NEW"  data-live-search="true" data-style="btn-white" >
+				    <option  value="VSL_CODE" >VSL_DESC</option>
+				</select>
+			</div>
+		    </div>
+		
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Mount On</label>
+			    <select class="form-control selectpicker ML_MOUNT_ON_CLASS btn-sm" name="ML_MOUNT_ON_NEW"  data-live-search="true" data-style="btn-white" >
+					<option  value="VSL_CODE">VSL_DESC</option>
+				</select>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Operation</label>
+			    <select class="form-control selectpicker ML_OPERATE_CLASS btn-sm" name="ML_OPERATE_NEW" id="" data-live-search="true" data-style="btn-white" >
+				<option  value="Manual">Manual</option>
+				<option value="Motorized">Motorized</option>
+			    </select>
+			</div>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Control</label>
+			    <select class="form-control selectpicker btn-sm" name="ML_CONTROL_NEW" id="" data-live-search="true" data-style="btn-white" >
+				<option  value="Left">Left</option>
+				<option value="Right">Right</option>
+			    </select>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Opening</label>
+			    <select class="form-control selectpicker ML_OPENING_CLASS btn-sm" name="ML_OPENING_NEW" id="" data-live-search="true" data-style="btn-white" >
+				<option value="Top">Top</option>
+				<option value="Left">Left</option>
+				<option  value="Right">Right</option>
+				<option value="Center">Center</option>
+			    </select>
+			</div>
+		    </div>
+		<input type="hidden" class="form-control" name="ML_OP_HEAD_SYS_ID_NEW"  value="ML_OP_HEAD_SYS_ID" readonly>
+		<input type="hidden" class="form-control" name="ML_SC_LINE_SYS_ID_NEW"value="ML_SC_LINE_SYS_ID" readonly>
+		<input type="hidden" class="form-control" name="ML_TXN_DT_NEW"  value="ML_TXN_DT" readonly>
+		<input type="hidden" class="form-control" name="ML_LOCN_CODE_NEW" value="ML_LOCN_CODE" readonly>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Quantity</label>
+			    <input type="text" class="form-control ML_QTY_CLASS input-sm" name="ML_QTY_NEW" id="" value="ML_QTY" readonly>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Pelmet</label>
+			    <select class="form-control selectpicker ML_PELMET_CLASS btn-sm" name="ML_PELMET_NEW" data-live-search="true" data-style="btn-white" >
+				<option  value="">Select</option>
+				<option  value="Yes">Yes</option>
+				<option value="No">No</option>
+			    </select>
+			</div>
+		    </div>
+		</div>
+		<div class="row">
+		    <div  class="hideline">
+			<div class="col-md-3">
+			    <div class="col-md-12 form-group">
+				<label class="control-label">Projection</label>
+				<input type="text" class="form-control ML_PROJECTION_CLASS input-sm" name="ML_PROJECTION_NEW"  value="ML_PROJECTION" readonly>
+			    </div>
+			</div>
+			<div class="col-md-3">
+			    <div class="col-md-12 form-group">
+				<label class="control-label">Fasica</label>
+				<input type="text" class="form-control ML_FASICA_CLASS input-sm" name="ML_FASICA_NEW"  value="ML_FASCIA" readonly>
+			    </div>
+			</div>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Window Width</label>
+			    <input type="text" class="form-control input-sm" name="ML_WIDTH_NEW" id="ML_WIDTH_NEW" value="ML_WIDTH" readonly>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Window Height</label>
+			    <input type="text" class="form-control input-sm" name="ML_HEIGHT_NEW" id="ML_HEIGHT_NEW" value="ML_HEIGHT" readonly>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Wall Width</label>
+			    <input type="text" class="form-control input-sm" name="ML_FULL_WIDTH_NEW" id="" value="ML_FULL_WIDTH" readonly>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Wall Height</label>
+			    <input type="text" class="form-control input-sm" name="ML_FULL_HEIGHT_NEW" id="ML_FULL_HEIGHT" value="ML_FULL_HEIGHT" readonly>
+			</div>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Wall to Left</label>
+			    <input type="text" class="form-control input-sm" name="ML_LEFT_WALL_NEW" id="ML_LEFT_WALL" value="ML_LEFT_WALL" readonly>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Wall to Right</label>
+			    <input type="text" class="form-control input-sm" name="ML_RIGHT_WALL_NEW" id="ML_RIGHT_WALL" value="ML_RIGHT_WALL" readonly>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Up to Ceiling</label>
+			    <input type="text" class="form-control input-sm" name="ML_CEILING_UP_NEW" id="ML_CEILING_UP" value="ML_CEILING_UP" readonly>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Down to Floor</label>
+			    <input type="text" class="form-control input-sm" name="ML_FLOOR_DOWN_NEW" id="ML_FLOOR_DOWN" value="ML_FLOOR_DOWN" readonly>
+			</div>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Window Depth</label>
+			    <input type="text" class="form-control input-sm" name="ML_WINDOW_DEPTH_NEW" id="ML_WINDOW_DEPTH" value="ML_WINDOW_DEPTH" readonly>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Window Opening</label>
+			    <select class="form-control selectpicker btn-sm" name="ML_WINDOW_OPENING_NEW" id="ML_WINDOW_OPENING" data-live-search="true" data-style="btn-white btn-sm" >
+				<option selected value="">Select</option>
+					<option value="VSL_CODE">VSL_DESC</option>
+				</select>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Handle Position</label>
+			    <select class="form-control selectpicker btn-sm" name="ML_HANDLE_POSITION_NEW" id="ML_HANDLE_POSITION" data-live-search="true" data-style="btn-white btn-sm" >
+					<option selected value="">Select</option>
+					<option value="VSL_CODE">VSL_DESC</option>
+				</select>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Handle Size</label>
+			    <input type="text" class="form-control input-sm" name="ML_HANDLE_SIZE_NEW" id="ML_HANDLE_SIZE" value="ML_HANDLE_SIZE" readonly>
+			</div>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Power Distance</label>
+			    <input type="text" class="form-control input-sm" name="ML_POWER_DISTANCE_NEW" id="ML_POWER_DISTANCE" value="ML_POWER_DISTANCE" readonly>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group">
+			    <label class="control-label">Remarks</label>
+			    <input type="text" class="form-control ML_REMARKS_CLASS input-sm" name="ML_REMARKS_NEW" id="" value="ML_REMARKS" readonly>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<section class="col-md-12 form-group">
+			    <label class="control-label">Gypsum Yes/No</label>
+			    <!--<input type="checkbox" value="N" class="lcs_check"  onchange="gypsumYesNow($(this))" name="ML_GYPSUM_YN" id="ML_GYPSUM_YN" readonly/>-->
+			    <input type="hidden" name="ML_GYPSUM_YN" class="mlGypsumYN">
+			    <input type="checkbox" value="" class="lcs_check"  id="GYPSUM_YN" />			    
+			</section>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group gypsumDetail">
+			    <label class="control-label">Gypsum Width</label>
+			    <input type="text" class="form-control input-sm" onblur="$(this).formatCurrency();" name="ML_GYPSUM_WIDTH_NEW" id="ML_GYPSUM_WIDTH" value="ML_GYPSUM_WIDTH" readonly>
+			</div>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group gypsumDetail">
+			    <label class="control-label">Gypsum Height</label>
+			    <input type="text" class="form-control input-sm" onblur="$(this).formatCurrency();" name="ML_GYPSUM_HEIGHT_NEW" id="ML_GYPSUM_HEIGHT" value="ML_GYPSUM_HEIGHT" readonly>
+			</div>
+		    </div>
+		    <div class="col-md-3">
+			<div class="col-md-12 form-group gypsumDetail ">
+			    <label class="control-label">Gypsum Depth</label>
+			    <input type="text" class="form-control input-sm" onblur="$(this).formatCurrency();" name="ML_GYPSUM_DEPTH_NEW" id="ML_GYPSUM_DEPTH" value="ML_GYPSUM_DEPTH" readonly>
+			</div>
+		    </div>
+		</div>
+		<input type="hidden" name="ML_SYS_ID_NEW" value="ML_SYS_ID" readonly>
+		<div class="row" class="MeasurementImageEdit">
+			<div class="col-md-4 odd_file">
+				<img class="col-md-12 img-thumbnail" style="float: none; height: 150px"src="MI_FILE_NAME" readonly>
+				<input type="hidden" name='MI_SYS_ID' value="MI_SYS_ID"  readonly>
+				<div class="input-group">
+				<span class="input-group-btn">
+				</span>
+				<input type="text" class="form-control input-sm" id="userfile1" name='MI_FILE_NAME_OLD' value="MI_FILE_NAME" class="form-control" readonly>
+				</div>
+				<p><span class="btn btn-sm btn-danger test" onclick="DeleteMeasurementImage"><i class="fa fa-trash-o"></i></span><b><span class="MeasureImageSize pull-right"></span></b></p>
+			</div>
+		
+		<div>
+		    <button type="button "class="AddMeasurement btn btn-sm btn-primary test hide" onclick="AddMeasurement(this)">add<input class="CurrentLineId" type="hidden" value="ML_SYS_ID"></button>
+		</div>
+		    
+		<div>
+		    <button type="button" class="AddMeasurement btn btn-sm btn-primary test hide" onclick="AddMeasurement(this)">add<input class="CurrentLineId" type="hidden" value='ML_SYS_ID'></button>
+		</div>
+		
+	    </div>
+	    <h5 class="hidden-lg hidden-sm"></h5>
+	    <div class="row">
+		<fieldset>
+		    <center class="hideClose">
+			<button onclick="UpdateMeasurementLine" class="btn btn-sm btn-inverse test" >update</button>
+			<a class="btn btn-warning btn-sm hide" id="mtStatus" href="">Update and Send</a>
+			<button onclick="DeleteMeasurementLine" class="btn btn-sm btn-danger test" >delete</button>
+		    </center>
+		    <center class="ShowClose">
+			<a href="LogiCtr/MeasurementTransaction_View" class="btn btn-sm btn-inverse button">save</a>
+			<a class="btn btn-sm btn-warning" href="#" name="sendApprove" id="sendApprove" value="sendApprove" >saveappve</a>
+			<a onclick="window.history.back();"class="btn btn-sm btn-danger">close</a>
+		    </center>
+		</fieldset>
+	    </div>
+	</div>
+	
+    </div>
+    <h3>&nbsp;</h3>
+    <div class="row">
+	<fieldset>
+	    <center>
+		<button id="save_add" class="btn btn-sm btn-primary test">save/Add More</button>
+		<a type="button" class="btn btn-sm btn-danger" onclick="window.history.back();">Cancel</a>
+	    </center>
+	</fieldset>
+    </div>
+    <h3>&nbsp;</h3>
+    <div class="row">
+	<div class="col-md-3">
+	    <div class="col-md-12 form-group">
+			<label class="control-label">transaction</label>
+			<input type="text" class="form-control input-sm" name="MH_TXN_CODE" id="MH_TXN_CODE1" value="MENU_TXN_CODE" readonly>
+	    </div>
+	</div>
+	<div class="col-md-3">
+	    <div class="col-md-12 form-group">
+			<label class="control-label">Txn Num</label>
+			<input type="text" class="form-control input-sm" name="MH_TXN_NO" id="MH_TXN_NO1" value="MH_TXN_NO" readonly>
+	    </div>
+	</div>
+	<div class="col-md-3">
+	    <div class="col-md-12 form-group">
+			<label class="control-label">Date</label>
+			<input type="text" class="form-control input-sm" name="MH_TXN_DT" id="defaultdate5" value="MH_TXN_DT" readonly>
+	    </div>
+	</div>
+    </div>
+    
+    <!-- Script start -->
+    
+    <script type="text/javascript">
+    alert("Test values");
+   // $test = $this->input->post('id');
+   // alert("Testing data"+$test);
+    
+    </script>
+     <script>
+	
+	function dynamicValidation()
+	{
+	    $current="#myCarousel";
+	    $('.selectpicker').selectpicker('refresh');    
+	    $('#form_validation')
+	    .bootstrapValidator('addField', $($current).find('[name="ML_BULD_TYPE_NEW"]'))
+	    .bootstrapValidator('addField', $($current).find('[name="ML_BUILD_NEW"]'))
+	    .bootstrapValidator('addField', $($current).find('[name="ML_FLOOR_NEW"]'))
+	    .bootstrapValidator('addField', $($current).find('[name="ML_FLAT_NEW"]'))
+	    .bootstrapValidator('addField', $($current).find('[name="ML_WIDTH_NEW"]'))
+	    .bootstrapValidator('addField', $($current).find('[name="ML_HEIGHT_NEW"]'))
+	    .bootstrapValidator('addField', $($current).find('[name="ML_QTY_NEW"]'))
+	    .bootstrapValidator('addField', $($current).find('[name="ML_PROJECTION_NEW"]'))
+	    .bootstrapValidator('addField', $($current).find('[name="ML_FASICA_NEW"]'))
+	    .bootstrapValidator('addField', $($current).find('[name="ML_REMARKS_NEW"]'));
+	};
+	
+	$('.carousel').on('slid.bs.carousel', function (){
+	    var slider = $(this).find($(".slidercount"));
+	    var count=1;
+	    $(".slidercount").each(function()
+	    {
+		if($(this).hasClass("active"))
+		{
+		    var pagenumber=count+" / "+slider.length;
+		    $("#currentLine").html(pagenumber);
+		}
+		count++;
+	    });
+	});
+    </script>
+	<!-- Script ends -->
